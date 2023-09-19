@@ -46,16 +46,16 @@ class TaskController extends Controller
         $task->save();
         return redirect('/task/list');
     }
-    /*public function newView(){
+    public function newView(){
         $users = User::all(); 
         return view ('task.new', ['users' => $users]); 
     }
 
     public function editview ($id){
         $users = User::all(); 
-        $task -> Task::find ($id); 
+        $task = Task::find ($id); 
         return view('task.edit', ['users' => $users, 'task' => $task]);
-    } */
+    }
     public function listview(){
         $tasks = Task::all(); 
         return view('task.list', ['tasks' => $tasks]);

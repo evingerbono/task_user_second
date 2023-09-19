@@ -26,7 +26,7 @@ Route::post ('/api/tasks', [Taskcontroller::class, 'store']);
 Route::put ('/api/tasks//id' , [Taskcontroller::class, 'update' ]); 
 Route::delete('/api/tasks/id', [TaskController:: class, 'destroy']); 
 Route::get ('/api/users', [UserController::class, 'index' ]) ; 
-Route:: get ('/task/new', [TaskController::class, 'newview']); 
+Route::get ('/task/new', [TaskController::class, 'newview']); 
 Route::get ('/task/edit/{id}', [TaskController:: class, 'editview']); 
 Route::get ('/task/list', [TaskController:: class, 'listview']);
 
