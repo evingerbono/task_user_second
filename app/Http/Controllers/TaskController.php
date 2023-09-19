@@ -30,10 +30,11 @@ class TaskController extends Controller
         $task = new Task();
         $task->title = $request->title;
         $task->description = $request->description;
-        $task->end_date - $request->end_date;
+        $task->end_date = $request->end_date;
         $task->user_id = $request->user_id;
         $task->status = $request->status;
         $task->save();
+        return redirect('/task/list');
     }
     public function update(Request $request, $id)
     {
